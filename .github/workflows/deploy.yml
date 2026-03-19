@@ -5,19 +5,12 @@ on:
     branches:
       - main
 
-# Allow only one concurrent deployment to avoid race conditions
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
-    name: Build
+  deploy:
+    name: Build & deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,19 +30,22 @@ jobs:
         env:
           VITE_BASE_URL: /tether/
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+      - name: Deploy dist/ to live branch
+        run: |
+          cd dist
 
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          # Configure git identity for the commit
+          git init
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Stage everything in dist/
+          git add -A
+
+          # Create a single orphan commit (no history baggage)
+          git commit -m "deploy: $(date -u +'%Y-%m-%dT%H:%M:%SZ') @ ${{ github.sha }}"
+
+          # Force-push to the live branch (orphan — no shared history with main)
+          git push --force \
+            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
+            HEAD:live
