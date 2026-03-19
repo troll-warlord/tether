@@ -1,0 +1,54 @@
+{
+  "name": "tether",
+  "private": false,
+  "version": "0.1.0",
+  "description": "A lightweight, browser-based Kubernetes dashboard built with Vue 3.",
+  "license": "MIT",
+  "homepage": "https://github.com/tarun-pable/tether",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tarun-pable/tether.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,vue,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,vue,css}\""
+  },
+  "dependencies": {
+    "@pinia/colada": "^1.0.0",
+    "@vue-flow/background": "^1.3.2",
+    "@vue-flow/controls": "^1.1.3",
+    "@vue-flow/core": "^1.48.2",
+    "@vue-flow/minimap": "^1.5.4",
+    "axios": "^1.13.6",
+    "chart.js": "^4.5.1",
+    "js-yaml": "^4.1.1",
+    "lucide-vue-next": "^0.577.0",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.30",
+    "vue-chartjs": "^5.3.3",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/typography": "^0.5.19",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^10.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-vue": "^10.8.0",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.0",
+    "vue-eslint-parser": "^10.4.0"
+  }
+}

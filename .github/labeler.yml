@@ -1,0 +1,45 @@
+# .github/labeler.yml
+# Maps PR labels to branch name patterns.
+# Uses actions/labeler v5 syntax — each entry is an array of match objects.
+# docs: https://github.com/actions/labeler
+
+feature:
+  - head-branch:
+      - '^feat/'
+      - '^feature/'
+
+bug:
+  - head-branch:
+      - '^fix/'
+      - '^bugfix/'
+      - '^hotfix/'
+
+documentation:
+  - head-branch:
+      - '^docs/'
+      - '^doc/'
+
+refactor:
+  - head-branch:
+      - '^refactor/'
+      - '^perf/'
+
+chore:
+  - head-branch:
+      - '^chore/'
+      - '^deps/'
+      - '^build/'
+
+testing:
+  - head-branch:
+      - '^test/'
+      - '^tests/'
+
+ci:
+  - head-branch:
+      - '^ci/'
+
+style:
+  - head-branch:
+      - '^style/'
+      - '^lint/'
