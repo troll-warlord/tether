@@ -134,7 +134,7 @@ chore: bump eslint-plugin-vue to 9.x
 
 ## Reporting issues
 
-Please use [GitHub Issues](https://github.com/tarun-pable/tether/issues). Include:
+Please use [GitHub Issues](https://github.com/troll-warlord/tether/issues). Include:
 
 - Kubernetes version (`kubectl version`)
 - Browser + version

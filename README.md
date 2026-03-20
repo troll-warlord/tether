@@ -2,17 +2,17 @@
   <h1>⚓ tether</h1>
   <p><strong>A lightweight, browser-based Kubernetes dashboard</strong></p>
   <p>
-    <a href="https://github.com/tarun-pable/tether/actions/workflows/deploy.yml">
-      <img src="https://github.com/tarun-pable/tether/actions/workflows/deploy.yml/badge.svg" alt="Deploy" />
+    <a href="https://github.com/troll-warlord/tether/actions/workflows/deploy.yml">
+      <img src="https://github.com/troll-warlord/tether/actions/workflows/deploy.yml/badge.svg" alt="Deploy" />
     </a>
-    <a href="https://github.com/tarun-pable/tether/actions/workflows/ci.yml">
-      <img src="https://github.com/tarun-pable/tether/actions/workflows/ci.yml/badge.svg" alt="CI" />
+    <a href="https://github.com/troll-warlord/tether/actions/workflows/ci.yml">
+      <img src="https://github.com/troll-warlord/tether/actions/workflows/ci.yml/badge.svg" alt="CI" />
     </a>
     <a href="LICENSE">
       <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" />
     </a>
-    <a href="https://github.com/tarun-pable/tether/releases">
-      <img src="https://img.shields.io/github/v/release/tarun-pable/tether" alt="Release" />
+    <a href="https://github.com/troll-warlord/tether/releases">
+      <img src="https://img.shields.io/github/v/release/troll-warlord/tether" alt="Release" />
     </a>
   </p>
 </div>
@@ -54,7 +54,7 @@ kubectl proxy --port=8001
 ### 2 — Run tether
 
 ```bash
-git clone https://github.com/tarun-pable/tether.git
+git clone https://github.com/troll-warlord/tether.git
 cd tether
 npm install
 npm run dev
