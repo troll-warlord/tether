@@ -10,6 +10,16 @@
     "url": "https://github.com/tarun-pable/tether.git"
   },
   "type": "module",
+  "bin": {
+    "tether": "./bin/tether.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -17,7 +27,8 @@
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"src/**/*.{js,vue,css}\"",
-    "format:check": "prettier --check \"src/**/*.{js,vue,css}\""
+    "format:check": "prettier --check \"src/**/*.{js,vue,css}\"",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@pinia/colada": "^1.0.0",

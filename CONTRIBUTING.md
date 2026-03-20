@@ -26,7 +26,7 @@ Thank you for your interest in contributing! This document explains how to get t
 ### Local setup
 
 ```bash
-# 1. Fork and clone
+# 1. Fork and clone the source branch
 git clone https://github.com/<your-username>/tether.git
 cd tether
 

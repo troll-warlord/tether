@@ -51,9 +51,7 @@ It connects directly to any `kubectl proxy` endpoint — no backend server, no c
 kubectl proxy --port=8001
 ```
 
-This exposes your cluster's API server at `http://localhost:8001` without requiring any in-cluster components.
-
-### 2 — Run tether locally
+### 2 — Run tether
 
 ```bash
 git clone https://github.com/tarun-pable/tether.git
@@ -62,20 +60,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:5173** in your browser.
-On the Connect screen, enter `http://localhost:8001` as the API server URL.
-
----
-
-## Hosted version (GitHub Pages)
-
-A pre-built version is available at:
-
-```
-https://<your-username>.github.io/tether/
-```
-
-Because tether is entirely static HTML/JS, you can use the hosted version directly against any `kubectl proxy` running on your machine — no data ever leaves your browser.
+Open **http://localhost:5173** and enter `http://localhost:8001` as the API URL.
 
 ---
 
